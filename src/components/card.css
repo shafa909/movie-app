@@ -1,0 +1,41 @@
+.main-box {
+  width: 178px;
+  height: auto;
+  background: #394b61;
+  border-radius: 11px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 12px;
+}
+
+.movie-image {
+  width: 157px;
+  height: 188px;
+  background: #283647;
+  border-radius: 6px;
+  margin-inline: 10px;
+  margin-block: 12px;
+}
+
+.movie-title {
+  float: left;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+  margin-inline: 10px;
+  color: #d4d7dd;
+  margin-bottom: 12px;
+}
+
+.icon-box {
+    clear: both;
+    float: left;
+    display: flex;
+    gap: 16px;
+    color: #D4D7DD;
+    margin-left: 10px;
+    margin-top: auto;
+}

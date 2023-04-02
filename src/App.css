@@ -1,0 +1,13 @@
+
+
+.App {
+  display: flex;
+}
+
+.main-container {
+  
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 30px;
+  background-color: #273244;
+}
