@@ -1,4 +1,66 @@
 .drawer-container {
-    height: 100%;
-    background-color: #1F2A3C;
+  height: 100%;
+  background-color: #1f2a3c;
+  border: none !important;
+}
+
+.MuiDrawer-paper {
+  border: none !important;
+}
+
+.profile-image {
+  width: 100px;
+  border-radius: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+.divider {
+  background-color: #394b61;
+}
+
+.profile-name {
+  color: #d4d7dd;
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+}
+
+.list-item {
+  padding-left: 35px !important;
+}
+
+.list-button {
+    padding-block: 5px !important;
+}
+
+.list-button-active {
+    border-right: solid !important;
+    border-color: #00e0ff !important;
+    border-width: 3px !important;
+}
+
+.list-icon {
+  min-width: 35px !important;
+  color: #d4d7dd !important;
+}
+
+.list-button svg {
+    font-size: 17px;
+}
+
+.list-icon-active {
+  color: #00e0ff !important;
+}
+
+.list-item-text {
+    color: #d4d7dd;
+    font-weight: 600 !important;
+    font-size: 13px !important;
+}
+
+.list-item-text-active {
+    color: #00e0ff !important;
 }

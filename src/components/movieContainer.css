@@ -1,0 +1,16 @@
+.main-container {
+    background-color: #273244;
+    height: 100% !important;
+}
+
+.search-bar {
+    background-color: hsl(217, 32%, 18%);
+    color: #d4d7dd !important;
+    width: 500px;
+}
+
+.new {
+    color: #d4d7dd !important;
+    background-color: hsl(217, 32%, 18%);
+    padding: 0px !important;
+}
