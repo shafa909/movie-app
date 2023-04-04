@@ -47,7 +47,6 @@ function MovieContainer({ drawerWidth, handleDrawerToggle }) {
         <MenuIcon />
       </IconButton>
       <SearchBar setSearchWord={setSearchWord} />
-
       <div className="setting-icon">
         <LightModeIcon style={{ color: "#d4d7dd" }} />
         <MoreVertIcon style={{ color: "#d4d7dd" }} />
