@@ -1,17 +1,19 @@
-
 import SearchIcon from "@mui/icons-material/Search";
 import { useState, useRef } from "react";
 import InputAdornment from "@mui/material/InputAdornment";
 import TextField from "@mui/material/TextField";
 import CloseIcon from "@mui/icons-material/Close";
-import "./movieContainer.css";
 
-function SearchBar() {
+function SearchBar({ setSearchWord }) {
   const [showSearch, setShowSearch] = useState(false);
   const textRef = useRef();
 
   const focusSearchBox = () => {
     textRef.current.focus();
+  };
+
+  const onTextChange = (e) => {
+    setSearchWord(e.target.value);
   };
 
   const iconAdornment = showSearch
@@ -39,6 +41,7 @@ function SearchBar() {
       )}
       <TextField
         inputRef={textRef}
+        onChange={onTextChange}
         placeholder="Title, Movie, Keyword"
         size="small"
         sx={{
@@ -47,7 +50,7 @@ function SearchBar() {
           },
           width: 0,
           "&:focus-within": {
-            width: "60%",
+            width: "70%",
             backgroundColor: "hsl(217, 32%, 18%)",
             "& fieldset": {
               border: "1px solid #00e0ff !important",

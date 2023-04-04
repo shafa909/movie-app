@@ -1,0 +1,32 @@
+.progress-main {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.progressVisualFull {
+  display: flex;
+  /* change the value if you want different thickness */
+  height: 6px;
+  margin: 20px 0;
+  border: 1px;
+  width: 100px;
+  background-color: #1f2a3c !important;
+}
+
+.progressVisualPart {
+  /* Number of the seconds for complete animation */
+  transition: width 2s;
+}
+
+.progressLabel {
+  font-weight: 600;
+  color: #d4d7dd;
+}
+
+@media only screen and (max-width: 600px) {
+  .progressLabel {
+    font-weight: 400;
+    font-size: 11px;
+  }
+}

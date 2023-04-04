@@ -4,9 +4,34 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Typography from "@mui/material/Typography";
 import "./movieContainer.css";
 import SearchBar from "./SearchBar";
+import DetailView from "./DetailView";
+import { createPortal } from "react-dom";
+import { useEffect, useRef, useState } from "react";
+import mdata from "../data.json";
+import Card from "./Card";
+import { CSSTransition } from "react-transition-group";
+import GridView from "./GridView";
+import LightModeIcon from "@mui/icons-material/LightMode";
+import MoreVertIcon from "@mui/icons-material/MoreVert";
 
 function MovieContainer({ drawerWidth, handleDrawerToggle }) {
- 
+  const [searchWord, setSearchWord] = useState("");
+  const [movieData, setMovieData] = useState(mdata);
+
+  useEffect(() => {
+    if (!searchWord) setMovieData(mdata);
+    else {
+      const FilterdData = filterItems(mdata, searchWord);
+      setMovieData(FilterdData);
+    }
+  }, [searchWord]);
+
+  function filterItems(arr, query) {
+    return arr.filter((movie) =>
+      movie.Title.toLowerCase().includes(query.toLowerCase())
+    );
+  }
+
   return (
     <Box
       className="main-container"
@@ -17,6 +42,7 @@ function MovieContainer({ drawerWidth, handleDrawerToggle }) {
       }}
     >
       <IconButton
+        className="mobile-menu-icon"
         color="inherit"
         aria-label="open drawer"
         edge="start"
@@ -25,37 +51,13 @@ function MovieContainer({ drawerWidth, handleDrawerToggle }) {
       >
         <MenuIcon />
       </IconButton>
+      <SearchBar setSearchWord={setSearchWord} />
 
-      <SearchBar/>
-
-      <Typography paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Rhoncus dolor purus
-        non enim praesent elementum facilisis leo vel. Risus at ultrices mi
-        tempus imperdiet. Semper risus in hendrerit gravida rutrum quisque non
-        tellus. Convallis convallis tellus id interdum velit laoreet id donec
-        ultrices. Odio morbi quis commodo odio aenean sed adipiscing. Amet nisl
-        suscipit adipiscing bibendum est ultricies integer quis. Cursus euismod
-        quis viverra nibh cras. Metus vulputate eu scelerisque felis imperdiet
-        proin fermentum leo. Mauris commodo quis imperdiet massa tincidunt. Cras
-        tincidunt lobortis feugiat vivamus at augue. At augue eget arcu dictum
-        varius duis at consectetur lorem. Velit sed ullamcorper morbi tincidunt.
-        Lorem donec massa sapien faucibus et molestie ac.
-      </Typography>
-      <Typography paragraph>
-        Consequat mauris nunc congue nisi vitae suscipit. Fringilla est
-        ullamcorper eget nulla facilisi etiam dignissim diam. Pulvinar elementum
-        integer enim neque volutpat ac tincidunt. Ornare suspendisse sed nisi
-        lacus sed viverra tellus. Purus sit amet volutpat consequat mauris.
-        Elementum eu facilisis sed odio morbi. Euismod lacinia at quis risus sed
-        vulputate odio. Morbi tincidunt ornare massa eget egestas purus viverra
-        accumsan in. In hendrerit gravida rutrum quisque non tellus orci ac.
-        Pellentesque nec nam aliquam sem et tortor. Habitant morbi tristique
-        senectus et. Adipiscing elit duis tristique sollicitudin nibh sit.
-        Ornare aenean euismod elementum nisi quis eleifend. Commodo viverra
-        maecenas accumsan lacus vel facilisis. Nulla posuere sollicitudin
-        aliquam ultrices sagittis orci a.
-      </Typography>
+      <div className="setting-icon">
+        <LightModeIcon style={{ color: "#d4d7dd" }} />
+        <MoreVertIcon style={{ color: "#d4d7dd" }} />
+      </div>
+      <GridView  movieData={movieData} />
     </Box>
   );
 }

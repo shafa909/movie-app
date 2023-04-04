@@ -1,16 +1,24 @@
 .main-container {
-    background-color: #273244;
-    height: 100% !important;
+  background-color: #273244;
+  height: 100% !important;
+}
+
+.mobile-menu-icon {
+  margin-top: -14px !important;
+  color: #d4d7dd !important; 
 }
 
 .search-bar {
-    background-color: hsl(217, 32%, 18%);
-    color: #d4d7dd !important;
-    width: 500px;
+  background-color: hsl(217, 32%, 18%);
+  color: #d4d7dd !important;
+  width: 500px;
 }
 
-.new {
-    color: #d4d7dd !important;
-    background-color: hsl(217, 32%, 18%);
-    padding: 0px !important;
+
+.setting-icon {
+  position: absolute;
+  top: 33px;
+  right: 33px;
+  display: flex;
+  gap: 10px;
 }

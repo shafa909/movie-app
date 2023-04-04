@@ -1,0 +1,27 @@
+.grid-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  list-style-type: none;
+  margin-top: 27px;
+  padding: 0;
+}
+  
+.grid-item {
+  background-color:  #273244;
+  padding: 10px;
+}
+
+.details-container {
+  grid-column: 1 / -1;
+}
+
+
+
+
+@media only screen and (max-width: 444px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+   
+  } 
+}
