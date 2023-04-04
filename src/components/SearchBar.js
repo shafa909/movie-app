@@ -50,7 +50,7 @@ function SearchBar({ setSearchWord }) {
           },
           width: 0,
           "&:focus-within": {
-            width: "70%",
+            width: "65%",
             backgroundColor: "hsl(217, 32%, 18%)",
             "& fieldset": {
               border: "1px solid #00e0ff !important",
