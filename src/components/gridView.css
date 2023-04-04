@@ -16,12 +16,8 @@
   grid-column: 1 / -1;
 }
 
-
-
-
 @media only screen and (max-width: 444px) {
   .grid-container {
-    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
-   
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   } 
 }

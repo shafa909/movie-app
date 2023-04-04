@@ -1,21 +1,17 @@
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import MailIcon from "@mui/icons-material/Mail";
-import Toolbar from "@mui/material/Toolbar";
 import SearchIcon from "@mui/icons-material/Search";
 import PlaylistPlayIcon from "@mui/icons-material/PlaylistPlay";
 import LiveTvIcon from "@mui/icons-material/LiveTv";
 import AirplayIcon from "@mui/icons-material/Airplay";
 import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
 import UpdateIcon from "@mui/icons-material/Update";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import SettingsIcon from '@mui/icons-material/Settings';
 import LogoutIcon from '@mui/icons-material/Logout';
 import "./sideBar.css";
@@ -23,7 +19,7 @@ import "./sideBar.css";
 const drawerContent = (
   <div className="drawer-container">
     <div className="profile-box">
-      <img className="profile-image" src="/user.png" alt="image" />
+      <img className="profile-image" src="/user.png" alt="user" />
       <p className="profile-name">
         Eric Hoffman
       </p>

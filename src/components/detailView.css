@@ -89,7 +89,6 @@
 
 
 @media only screen and (max-width: 600px) {
-
   .d-main-container {
     max-height: 370px;
   }
@@ -120,13 +119,13 @@
   .trailer-btn {
     width: 120px;  
   }
+
+  .action-btn {
+
+    flex-direction: column;
+ 
+  }
     
-}
-
-
-
-.p-bar-box {
-  display: flex;
 }
 
 .alert-enter {

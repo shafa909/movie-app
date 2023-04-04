@@ -4,8 +4,7 @@ import { useEffect, useState } from "react";
 import { CSSTransition } from "react-transition-group";
 
 function DetailView({ movieData, isOpen }) {
-
-  const [open, setOpen] = useState();
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
@@ -17,7 +16,11 @@ function DetailView({ movieData, isOpen }) {
     <CSSTransition in={open} timeout={300} classNames="alert" unmountOnExit>
       <div className="d-main-container">
         <div className="image-box">
-          <img className="movie-poster" src={movieData.Poster} alt={movieData.Title} />
+          <img
+            className="movie-poster"
+            src={movieData.Poster}
+            alt={movieData.Title}
+          />
         </div>
         <div className="data-box">
           <h1 className="movie-name">{movieData.Title}</h1>
@@ -53,13 +56,8 @@ function DetailView({ movieData, isOpen }) {
           </div>
           <p className="movie-desc">{movieData.Plot}</p>
           <div className="action-btn">
-            <button className="play-btn">
-            Play Movie
-            </button>
-            <button className="trailer-btn">
-              Watch Trailer
-            </button>
-
+            <button className="play-btn">Play Movie</button>
+            <button className="trailer-btn">Watch Trailer</button>
           </div>
         </div>
       </div>

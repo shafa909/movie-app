@@ -1,18 +1,13 @@
 import Box from "@mui/material/Box";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
-import Typography from "@mui/material/Typography";
-import "./movieContainer.css";
 import SearchBar from "./SearchBar";
-import DetailView from "./DetailView";
-import { createPortal } from "react-dom";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import mdata from "../data.json";
-import Card from "./Card";
-import { CSSTransition } from "react-transition-group";
 import GridView from "./GridView";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
+import "./movieContainer.css";
 
 function MovieContainer({ drawerWidth, handleDrawerToggle }) {
   const [searchWord, setSearchWord] = useState("");
