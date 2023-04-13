@@ -11,6 +11,8 @@ In the project directory, you can run:
 ### `npm start`
 
 
+#### a mordern responsive movie app template
+
 ## screen recording
 
 
